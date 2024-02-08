@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+}
+.nav_logo ul, .nav_element ul,.nav_login ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+.nav_logo ul li, .nav_element ul li,.nav_login ul{
+    margin: 0 1em;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+.nav_login ul li{
+    margin: 0 0.5rem;
+}
+.nav_element ul li:hover{
+    scale: 2rem;
+    color: #26c5c5;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav_login button{
+    background: transparent;
+    padding: 0.5rem 2rem;
+    border: 3px solid #303B46;
+    border-radius: 1.5rem;
+    box-shadow: 0px 1px 0px rgb(0, 0, 0);
+    color: #fff;
+    /* font-weight: 500; */
+}
+.nav_login button:hover{
+    background: #26c5c5;
+    padding: 0.5rem 2rem;
+    border: 3px solid #303B46;
+    border-radius: 1.5rem;
+    box-shadow: 0px 1px 0px rgb(0, 0, 0);
+}

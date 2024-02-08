@@ -1,0 +1,56 @@
+.goal_content{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    /* justify-content: center; */
+    /* background: rgb(246,153,140); */
+    /* background: linear-gradient(170deg, rgba(246,153,140,1) 0%, rgba(31,35,46,1) 79%); */
+    border: 1px solid linear-gradient(170deg, rgba(246,153,140,1) 0%, rgba(31,35,46,1) 79%);
+    border-radius: 20px;
+    padding: 2rem 0;
+}
+.btn{
+    display: flex;
+    margin-left: 80px;
+}
+
+.btn button{
+    background: transparent;
+    padding: 0.5rem 2rem;
+    border: 3px solid #303B46;
+    border-radius: 1.5rem;
+    box-shadow: 0px 1px 0px rgb(0, 0, 0);
+    color: hsl(0, 0%, 100%);
+    margin: 0 6px;
+}
+.btn button:hover{
+    background: #26c5c5;
+}
+.shadow_red{
+    opacity: 20%;
+    filter: blur(90px);
+    position: absolute;
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background: rgb(246,153,140); */
+    background: linear-gradient(335deg, rgba(246,153,140,1) 0%, rgba(166,127,110,1) 100%);
+}
+.main_container{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.right_goal{
+    margin-top: 80px;
+}
+.card_content{
+    display: flex;
+    max-width: 85%;
+    margin: 35px 0px;
+}
+
+.content{
+    margin-left: 9px;
+    color: #fff;
+}
