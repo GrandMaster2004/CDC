@@ -1,0 +1,11 @@
+.about_main{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto;
+    color: #fff;
+}
+.about_text{
+    text-align: center;
+}

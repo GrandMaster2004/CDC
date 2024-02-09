@@ -7,11 +7,14 @@ import paper_plane from "../assets/image/icon_rotation3.svg";
 import box_icon1 from "../assets/image/box1.svg";
 import box_icon2 from "../assets/image/box2.svg";
 import "./Home.css";
+import About from "../components/About";
+import Goal from "./Goal";
+import Roadmap from "../components/Roadmap";
 
 const Home = () => {
   return (
     <div className="home">
-      <Navbar />
+      {/* <Navbar /> */}
       <span className="top_shadow"></span>
       <div className="main">
         <div className="main_left">
@@ -21,12 +24,12 @@ const Home = () => {
         </div>
         <div className="main_right">
           <div className="circle_outer">
-            <span className="rotation">
+            {/* <span className="rotation">
               <img src={goal} className="goal" alt="img" />
             </span>
             <span className="rotation">
               <img src={rocket} alt="img" className="plane" />
-            </span>
+            </span> */}
             <span className="rotation">
               <img src={paper_plane} className="rocket" alt="img" />
             </span>
@@ -45,6 +48,10 @@ const Home = () => {
           <span className="right_shadow shadow_common"></span>
         </div>
       </div>
+
+      <About />
+      <Goal />
+      <Roadmap />
     </div>
   );
 };
