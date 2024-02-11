@@ -16,10 +16,10 @@
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  animation: movedown 1s linear forwards;
-  opacity: 0;
+  /* animation: movedown 1s linear forwards; */
+  /* opacity: 0; */
 }
-@keyframes movedown {
+/* @keyframes movedown {
   0%{
     opacity: 1;
     transform: translateY(-30px);
@@ -28,7 +28,7 @@
     opacity: 1;
     transform: translateY(0px);
   }
-}
+} */
 
 .text-box{
   padding: 20px 30px;

@@ -43,6 +43,15 @@
 }
 .right_goal{
     margin-top: 80px;
+    max-width: 50%;
+}
+.left_goal{
+    max-width: 50%;
+}
+.left_goal img{
+    /* max-width: 50%; */
+    width: 30rem;
+    height: 30rem;
 }
 .card_content{
     display: flex;
