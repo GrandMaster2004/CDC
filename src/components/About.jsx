@@ -10,9 +10,20 @@ import { fadeIn } from "../variants";
 import { DiLinux } from "react-icons/di";
 import { IoCodeSlashOutline } from "react-icons/io5";
 // import { motion } from "framer-motion";
+import VanillaTilt from "vanilla-tilt";
+import { useEffect } from "react";
 
 const About = () => {
   const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+      max: 2,
+      speed: 10,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  });
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -22,57 +33,32 @@ const About = () => {
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className="about_main"
+      className="about_main grow_hover tilt"
+      style={{ "--clr": "#1084bf" }}
     >
       <h1>About Us</h1>
       <div className="icons_icon">
-        <motion.span
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-        >
+        <motion.span>
           <IoCodeSlashOutline className="icon icon_box" />
         </motion.span>
-        <motion.span
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-        >
+        <motion.span>
           <DiLinux className="icon icon_box" />
         </motion.span>
         <img
-          className="git_img"
+          className="git_img img_glowing"
           src="https://www.copsiitbhu.co.in/static/assets/img/landing/avatar.jpg"
           alt="img"
         />
-        <motion.span
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-        >
+        <motion.span>
           <DiLinux className="icon icon_box" />
         </motion.span>
-        <motion.span
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-        >
+        <motion.span>
           <IoCodeSlashOutline className="icon icon_box" />
         </motion.span>
       </div>
 
-      <p>Coders & Developer Club || MMMUT Gorakhapur</p>
-      <motion.div
-        // variants={fadeIn("right", 0.2)}
-        // initial="hidden"
-        // whileInView={"show"}
-        // viewport={{ once: false, amount: 0.7 }}
-        className="icons"
-      >
+      <p className="cdc">Coders & Developer Club || MMMUT Gorakhapur</p>
+      <motion.div className="icons">
         <div>
           <FiGithub className="li_item" />
         </div>
@@ -129,25 +115,7 @@ const About = () => {
         eos aliquam voluptates repudiandae non laboriosam, provident doloribus
         voluptas porro optio et ex. Doloribus, in sint quidem illo minus, omnis
         possimus harum doloremque amet itaque optio facere delectus adipisci
-        fugiat, voluptatem nobis similique impedit repellat reiciendis excepturi
-        laudantium architecto. Quod suscipit quam dicta soluta voluptate ea,
-        sunt quae fugit atque sint in culpa aliquid dolor sed ducimus delectus
-        consequuntur impedit tempora nihil cumque quibusdam nulla eum dolorum.
-        Expedita aperiam fugiat, aspernatur tempora quisquam alias sunt ad,
-        debitis odit ipsum omnis nulla iusto obcaecati tenetur! Molestiae
-        facere, sit illum eius amet nostrum dolore et velit dicta laborum magnam
-        ea, adipisci voluptate consequuntur quam facilis illo esse beatae totam,
-        delectus nihil quo provident pariatur. Harum, corporis vitae dolore
-        distinctio adipisci reiciendis est? Temporibus voluptatum quibusdam
-        atque ea deserunt! Architecto, corporis. Quo vitae aspernatur minus
-        tempora maxime a nemo dolorum aut obcaecati voluptatem quam, ut maiores
-        corporis possimus est adipisci voluptatum fuga animi ad labore harum
-        quibusdam fugit! Quisquam eveniet dignissimos amet labore reprehenderit
-        omnis tempore inventore laborum esse sed minus non blanditiis deserunt
-        aliquid vel sint iure, qui facere neque, dicta laboriosam consectetur
-        modi nihil! Quae exercitationem animi odit hic nam provident beatae
-        magni, ad reiciendis, a, delectus ex consectetur rem veritatis. Nesciunt
-        rerum in delectus dolorem ea veniam!
+        fugiat, voluptatem nobis
       </p>
     </motion.div>
   );

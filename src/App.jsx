@@ -6,13 +6,13 @@ import Team from "./page/Team";
 import Navbar from "./components/Navbar";
 import Admin from "./page/Admin";
 import Footer from "./components/Footer";
-// import { IconName } from "react-icons/fa";
+import Top from "./components/Top";
 
 function App() {
   return (
     <>
+      <Top />
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/alumni" element={<Alumni />} />
