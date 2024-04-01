@@ -9,8 +9,7 @@ import About from "../components/About";
 import Goal from "./Goal";
 import Roadmap from "../components/Roadmap";
 import { motion } from "framer-motion";
-import { MdOutlineRocketLaunch } from "react-icons/md";
-import { IoBulbOutline } from "react-icons/io5";
+
 const Home = () => {
   const [imgtag, useImgtag] = useState(true);
 

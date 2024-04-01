@@ -1,13 +1,9 @@
 import React from "react";
-import rocket_ani from "../assets/image/animation_coder.mov";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 
 const Goal_card = () => {
   return (
     <div className="card_content">
-      {/* <video id="rocket_ani" autoPlay loop>
-        <source src={rocket_ani} type="video/webm" />
-      </video> */}
       <div className="icon_right ">
         <MdOutlineRocketLaunch className="icon_icon" />
       </div>

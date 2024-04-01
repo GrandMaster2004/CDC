@@ -1,5 +1,4 @@
 import React from "react";
-import goal from "../assets/image/icon_rotation1.svg";
 import { DiAndroid } from "react-icons/di";
 import { DiCodeigniter } from "react-icons/di";
 import { motion } from "framer-motion";

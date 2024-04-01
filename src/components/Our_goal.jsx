@@ -1,14 +1,9 @@
 import React from "react";
-import mission_ani from "../assets/image/animation_rocket.mp4";
 
 import { IoBulbOutline } from "react-icons/io5";
 const Our_goal = () => {
   return (
     <div className="card_content">
-      {/* <video id="mission_ani" autoPlay loop>
-        <source src={mission_ani} type="video" />
-      </video> */}
-
       <div className="icon_right">
         <IoBulbOutline className="icon_icon" />
       </div>
