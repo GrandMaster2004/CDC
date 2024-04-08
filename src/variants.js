@@ -17,5 +17,3 @@ export const fadeIn = (direction, delay) => {
     },
   };
 };
-
-// export popup

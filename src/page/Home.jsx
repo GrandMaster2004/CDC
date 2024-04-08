@@ -1,9 +1,5 @@
-import React, { useState } from "react";
-import main2 from "../assets/image/machine.svg";
-import main3 from "../assets/image/girl_rocket.svg";
-import paper_plane from "../assets/image/icon_rotation3.svg";
-import box_icon1 from "../assets/image/other3.svg";
-import box_icon2 from "../assets/image/other8.svg";
+import React, { useEffect } from "react";
+import rayso from "../assets/image/CDC.svg";
 import "./Home.css";
 import About from "../components/About";
 import Goal from "./Goal";
@@ -11,11 +7,15 @@ import Roadmap from "../components/Roadmap";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const [imgtag, useImgtag] = useState(true);
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+      max: 2,
+      speed: 10,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  });
 
-  setInterval(() => {
-    useImgtag(!imgtag);
-  }, 5000);
   let glows = document.querySelectorAll(".grow_hover");
   glows.forEach((glow) => {
     glow.onmousemove = function (e) {
@@ -56,90 +56,17 @@ const Home = () => {
           <span className="spot_left"></span>
         </motion.div>
 
-        <motion.div className="main_right">
-          <div className="circle_outer circle_outer1">
-            <span className="rotation">
-              <img src={paper_plane} className="rocket" alt="img" />
-            </span>
-            <span className="rotation">
-              <img src={paper_plane} className="rocket1" alt="img" />
-            </span>
-          </div>
-          <div className="icon_shadow">
-            <img src={box_icon1} alt="img" className="icon_box" />
-          </div>
-          <div className="icon_shadow1">
-            <img src={box_icon2} alt="img" className="icon_box" />
-          </div>
-          <span className="spot_right1 shadow_common"></span>
-          <motion.div
-            animate={{
-              scale: [1, 1, 1, 1, 1],
-              rotate: [0, 0, 360, 180, 0],
-              borderRadius: ["50%", "50%", "50%", "50%", "50%"],
-            }}
-            transition={{
-              duration: 5,
-              ease: "easeInOut",
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: Infinity,
-              repeatDelay: 0,
-            }}
-            className="circle_inner border-gradient"
-          ></motion.div>
-
-          {imgtag ? (
-            <motion.img
-              animate={{
-                scale: [0, 1, 1, 1, 0],
-              }}
-              transition={{
-                duration: 5,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-                repeatDelay: 0,
-              }}
-              src={main3}
-              alt="img"
-              className="boy_img"
-            />
-          ) : (
-            <motion.img
-              animate={{
-                scale: [0, 1, 1, 1, 0],
-              }}
-              transition={{
-                duration: 5,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-                repeatDelay: 1,
-              }}
-              src={main2}
-              alt="img"
-              className="boy_img"
-            />
-          )}
-        </motion.div>
-        {/* <motion.div className="circle_shadow">
-          <span className="left_shadow shadow_common"></span>
-          <span className="right_shadow shadow_common"></span>
-        </motion.div> */}
+        <div className="main_right">
+          <img src={rayso} alt="img" className="code_img" />
+        </div>
       </div>
       <span className="spot_common spot_right3"></span>
       <span className=" spot_common spot_right2"></span>
       <span className="spot_common spot_right4"></span>
       <span className="spot_common spot_right5"></span>
-      {/* <div className="icon_left ">
-        <MdOutlineRocketLaunch className="icon_icon" />
-      </div>
-      <div className="icon_right">
-        <IoBulbOutline className="icon_icon" />
-      </div> */}
+
       <About />
       <Goal />
-      {/* <Testimonial /> */}
       <Roadmap />
     </div>
   );

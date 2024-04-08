@@ -1,7 +1,6 @@
 .goal_content {
   max-width: 80%;
   margin: auto;
-  /* margin-top: 3rem; */
   padding: 1rem 0rem 0rem 0rem;
   padding-bottom: 2rem;
   display: flex;
@@ -35,14 +34,6 @@
   align-items: center;
 }
 
-/* .icon_left {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px solid #1084bf;
-  background: #010e1b;
-  margin: 1rem auto;
-} */
 .icon_right {
   width: 100px;
   height: 100px;
@@ -65,16 +56,24 @@
   color: aqua;
 }
 
-/* @media (max-width: 974px) {
+@media (max-width: 974px) {
   .main_container {
     flex-direction: column;
     max-width: 100%;
   }
-  .left_goal {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .right_goal {
+  .card_content {
     max-width: 100%;
   }
-} */
+  .goal_left {
+    max-width: 100%;
+    /* margin: 0 auto; */
+  }
+  .goal_right {
+    max-width: 100%;
+  }
+  .goal_content {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
